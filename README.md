@@ -1,28 +1,25 @@
-# Welcome to our [We Have Startups at Home](https://keith-cheung.github.io/FIN377Final/)
+# Welcome to [We Have Startups at Home](https://keith-cheung.github.io/FIN377Final/)
 
-This is a website to showcase our final project for FIN 377 - Data Science for Finance course at Lehigh University.
+This is a website to showcase our final project for FIN 377.
 
-To see the complete analysis file(s) click [here](https://github.com/julioveracruz/testwebsite/blob/main/notebooks/example.ipynb).
+To see the complete analysis file(s) click [here](https://github.com/Keith-Cheung/FIN377Final/blob/main/build_sample.ipynb).
 
-Maybe you want a different website them for the project? Consider `minimal-mistakes`:
-1. [Go here](https://github.com/mmistakes/mm-github-pages-starter/generate).
-2. In the resulting repo, click Settings, then Pages, then make sure the source is the main branch.
-3. [The doc site is here](https://mmistakes.github.io/minimal-mistakes/docs/structure/) and will help you customize layouts and figure out how to use it.
 
 ## Table of contents
-1. [Introduction](#introduction)
-2. [Methodology](#meth)
-3. [Section 2](#section2)
-    1. [Subsection](#subsec2-1)
-    2. [Subsection](#subsec2-2)
-4. [Analysis Section](#section3)
-5. [Summary](#summary)
+1. [Project Summary](#introduction)
+2. [Hypothesis](#hyp)
+3. [Data Collection](#section2)
+4. [Methodology](#meth)
+5. [Interpretation and Discussion](#interpretation)
+6. [Conclusion](#conc)
 
-## Introduction  <a name="introduction"></a>
+## Project Summary  <a name="introduction"></a>
 
 (The "Introduction" text above is formatted in heading 2 style.) The main goal of this project is to explore *(insert project idea here)*.  
 
-## Methodology <a name="meth"></a>
+## Hypothesis <a name="hyp"></a>
+
+## Data Collection <a name="section2"></a>
 
 Here is some code that we used to develop our analysis. Blah Blah. [More details are provided in the Appendix](page2).
  
@@ -45,14 +42,9 @@ print(iris['species'].nunique(), '\n---')
 
 Notice that the output does NOT show! **You have to copy in figures and tables from the notebooks.**
 
-## Section <a name="section2"></a>
+## Methodology <a name="meth"></a>
 Blah blah
 
-### Subsection 1 <a name="subsec2-1"></a>
-This is a subsection, formatted in heading 3 style
-
-### Subsection 2 <a name="subsec2-2"></a>
-This is a subsection, formatted in heading 3 style
 
 ## Analysis Section <a name="section3"></a>
 
