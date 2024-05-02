@@ -87,9 +87,13 @@ Figure 4: This is a partial regression showing the relationship between startups
 
 ![](pics/artsreg.png)
 ![](pics/finreg.png)
-![](pics/regression.jpg)
+![](pics/realestatereg.png)
 
+Figure 5: These scatterplots show the individual trends of sectors. Each sector is different where there can be either a positive correlation, negataive correlation or no correlation between WFH and startups
 
+![](pics/regression_sectors.png)
+
+Figure 6: The table shows the different coefficients for each x variable as well as the r2
 ## Interpretation and Discustion <a name="interpretation"></a>
 
 Here are some graphs that we created in our analysis. We saved them to the `pics/` subfolder and include them via the usual markdown syntax for pictures.
