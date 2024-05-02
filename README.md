@@ -35,7 +35,24 @@ Because we used yearly data, there were not enough samples to make a conclusion 
 While we were loading the data for startups and WFH, we noticed that the shape of the dataframes were different. The industry startup data had separate columns for the year as well as the months (Jan-Dec) and a single column for the sectors. The industry WFH data had one column with the date that included both the month and year and had multiple columns for the different sectors. Below are images that show the differences.
 
 Startup Industry Data:
+
 ![](pics/startup_data_example.jpg)
+
+WFH Industry Data:
+
+![](pics/WFH_data_example)
+
+The first step for processing the data was to remove columns in the WFH data that were not relevant to WFH. These columns included full onsite and hybrid percentages. For the final dataset, we wanted to have columns for sector, month/year, WFH% and startups created. We removed the individual columns for months in the startup industry data and moved them into rows where the date was set as month/year. We changed the data type of the month/year using datetime python startup_fixed['year'] = pd.to_datetime(startup_fixed['year']) startup_fixed['year'] = startup_fixed['year'].dt.strftime('%m/%Y')
+
+Once the data types were the same in both datasets, we merged them together on the keys sector and year to have one single dataset.
+
+We had to merge multiple datasets and use information on variables that would useful for identifying the relationship for WFH and startups. We also kept subfolders to keep WFH data and startup data separate during the data cleaning process. We downloaded the raw data and performed eda techniques to identify outliers, missing data, or other unusual data and errors. Then we combined and merged all the data into one dataframe that we used to run regressions and create visualizations. We included multiple visualizations to give us more context to our answers about WFH and the amount of startups created. We are going to use regression across the sample time frame to see if there is a relationship between our variables.
+
+Regression Analysis: We conducted a regression analysis to assess the relationship between remote work and startup creation and utilized appropriate statistical techniques to control for confounding variables. We used Python and Jupyter Lab for all data analysis and visualizations below.
+
+## Methodology <a name="meth"></a>
+Blah blah
+
 
 ```python
 import seaborn as sns 
@@ -53,8 +70,6 @@ print(iris['species'].nunique(), '\n---')
 
 Notice that the output does NOT show! **You have to copy in figures and tables from the notebooks.**
 
-## Methodology <a name="meth"></a>
-Blah blah
 
 
 ## Interpretation and Discustion <a name="interpretation"></a>
