@@ -37,11 +37,11 @@ While we were loading the data for startups and WFH, we noticed that the shape o
 Startup Industry Data:
 
 ![](pics/startup_data_example.png)
-
+<br><br>
 WFH Industry Data:
 
 ![](pics/WFH_data_example.png)
-
+<br><br>
 The first step for processing the data was to remove columns in the WFH data that were not relevant to WFH. These columns included full onsite and hybrid percentages. For the final dataset, we wanted to have columns for sector, month/year, WFH% and startups created. We removed the individual columns for months in the startup industry data and moved them into rows where the date was set as month/year. We changed the data type of the month/year using datetime python startup_fixed['year'] = pd.to_datetime(startup_fixed['year']) startup_fixed['year'] = startup_fixed['year'].dt.strftime('%m/%Y')
 
 Once the data types were the same in both datasets, we merged them together on the keys sector and year to have one single dataset.
