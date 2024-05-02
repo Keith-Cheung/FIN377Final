@@ -122,26 +122,28 @@ If we were to expand this research project, we would look into the following are
 
 <img src="pics/keith_headshot.jpg" alt="julio" width="300"/>
 <br>
-Keith is a senior at Lehigh studying finance.
+Keith is a senior at Lehigh studying Finance.
 <br><br><br>
 <img src="pics/josh_headshot.png" alt="don" width="300"/>
 <br>
-Josh is a senior at Lehigh studying Finan
-
-
+Josh is a senior at Lehigh studying Finance and PreLaw
+<br><br><br>
+<img src="pics/josh_headshot.png" alt="don" width="300"/>
+<br>
+Danny is a senior at Lehigh studying Finance and Management. 
 ## Source Code
 
 Startup development:
 
-- https://www.bls.gov/bdm/us_age_naics_00_table7.txt (overall startups in the US)
-- https://www.census.gov/econ/bfs/current/index.html (startup in different industries)
+- [https://www.bls.gov/bdm/us_age_naics_00_table7.txt](https://www.bls.gov/bdm/us_age_naics_00_table7.txt). (overall startups in the US)
+- [https://www.census.gov/econ/bfs/current/index.html](https://www.census.gov/econ/bfs/current/index.html). (startup in different industries)
 
 Work From Home:
 
-- https://wfhmap.com/ (WFH data for both overall WFH and industry)
-- https://www.nber.org/papers/w32363 (WFH paper)
+- [https://wfhmap.com/](https://wfhmap.com/). (WFH data for both overall WFH and industry)
+- [https://www.nber.org/papers/w32363](https://www.nber.org/papers/w32363). (WFH paper)
 
 ## Important Notes
 We needed more data to make stronger conclusions Results varied by industry, expected to vary globally as well if we were able to get data from outside the U.S.
 
-To view the GitHub repo for this website, click [here](https://github.com/donbowen/teamproject).
+To view the GitHub repo for this website, click [here](https://github.com/Keith-Cheung/FIN377Final/tree/main?tab=readme-ov-file).
