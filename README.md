@@ -96,23 +96,25 @@ Figure 5: These scatterplots show the individual trends of sectors. Each sector 
 Figure 6: The table shows the different coefficients for each x variable as well as the r2
 ## Interpretation and Discustion <a name="interpretation"></a>
 
-Here are some graphs that we created in our analysis. We saved them to the `pics/` subfolder and include them via the usual markdown syntax for pictures.
+In order to work with the massive datasets, we had to do a lot of cleaning. Similar to in our midterm project, our work was done in a build sample file and we started with our general US statistics regression. We loaded in a dataset that told us how many startups were started every year from 2015 to 2023 and their survival rates; however, in order to stay relevant to our question we narrowed down our data to be concerned with the year end establishment count and not how many were closed down We then loaded our corresponding WFH dataset and narrowed it down to be in the year range we needed. Though the data set was done with annual results except in 2021 and onward, where because of the COVID pandemic and the increased interest in WFH data, results were taken monthly. In order to make this data match the startup annual data and keep it as a 1 to 1 merge, we would take the average WFH share for the year and use that as our desired statistic in the regression. After making sure our variables were the correct types, we did a 1:1 left merge on year with our WFH and startup, running an OLS regression on the number of establishments opened each year and the WFH share of the workforce to get out R-squared that Keith will go into in the next section
 
-![](pics/plot1.png)
-<br><br>
-Some analysis here
-<br><br>
-![](pics/plot2.png)
-<br><br>
-More analysis here.
-<br><br>
-![](pics/plot3.png)
-<br><br>
-More analysis.
+Our industry data, on the other hand, required a lot more cleaning. First, we had a startup data csv file with over 30000 entries, we needed to narrow this down to our desired industries in our desired year ranges (this time 2021-2024 due to data limitations), and keep the rest of the variables constant. Next, we had to manually adjust our WFH data since it was in a form that would make the two datasets nearly impossible to merge. The data remained the same, just reformatted. To get a regression and graph for each industry, we cleaned the data further by making datasets for each industry for both WFH and startup data, finally merging the corresponding datasets together before getting them back into a fixed dataset that was ready to run a regression and make graphs. The important caveats in our data that we want to mention are that this data is based on data from the US, in the industry startup data we kept most variables consistent, including the series of application, the geographical location (the whole of the us), and that they were seasonally adjusted. Also as I previously mentioned the time periods of interest, using averages of years in order to get clean merges, and purely focusing on the number of startups that were conceived in order to stay consistent with our question.
+
+Our initial regression was what prompted us to expand our research to separate industries. This r-squared was .29 which showed us that the short time span and limited data based on what we were able to collect was not enough to draw a valid conclusion. After expanding our research to measure based on industry WFH and startup quantity, we were able to run additional regressions that yielded more conclusive results. We feel that we would've been able to find stronger correlations if we had a greater range of data to work with, which is due to not many datasets on this information being available as well as the fact that the COVID-19 pandemic was only 4 years ago, making it hard to find long-term data on WFH and startups post-pandemic.
+
+We found that some sectors had a stronger correlation between WFH and startups generated, such as Transportation and Warehousing, while others had a very weak correlation, such as Utilities. Overall our data shows only a slight correlation between WFH and startups generated based on the datasets we were able to update.
 
 ## Conclusion <a name="conc"></a>
 
-Blah blah
+In conclusion, the findings of this analysis suggest that the rise of remote work is intertwined with the proliferation of startups, signaling a fundamental shift in the entrepreneurial landscape. As remote work continues to reshape the way we work and interact, it presents both opportunities and challenges for aspiring entrepreneurs and established businesses alike. Understanding and adapting to these dynamics will be crucial for fostering innovation and economic growth in the digital age.
+
+If we were to expand this research project, we would look into the following areas:
+
+1. Qualitative Research: Conduct interviews or surveys with remote workers and startup founders to gain qualitative insights into their experiences, challenges, and perceptions regarding the relationship between remote work and startup creation. This qualitative data can provide a richer understanding of the mechanisms driving this phenomenon.
+2. Geographical Analysis: Explore how the relationship between remote work and startups varies across regions outside the ones we studied here. Investigate whether certain locations, such as urban centers or tech hubs, exhibit stronger correlations between remote work adoption and entrepreneurial activity.
+3. Impact of Remote Work Policies: Analyze the impact of specific remote work policies and initiatives implemented by governments or organizations on startup formation and growth. Evaluate how factors like tax incentives, infrastructure investments, and regulatory frameworks influence entrepreneurial ecosystems in the context of remote work.
+4. Longitudinal Studies: Conduct longitudinal studies to track changes in remote work patterns and startup dynamics over time (which would need to be done 10-15 years down the line). Analyze how these trends evolve in response to macroeconomic conditions, technological advancements, and societal shifts, providing insights into the long-term sustainability of remote work-driven entrepreneurship.
+5. Cross-Cultural Comparison: Compare the relationship between remote work and startups across different cultural contexts and national settings. Investigate how cultural norms, values, and attitudes towards entrepreneurship and remote work shape the entrepreneurial landscape in diverse societies.
 
 
 
@@ -129,6 +131,17 @@ Don is an assistant professor at Lehigh.
 
 ## Source Code
 
+Startup development:
+
+- https://www.bls.gov/bdm/us_age_naics_00_table7.txt (overall startups in the US)
+- https://www.census.gov/econ/bfs/current/index.html (startup in different industries)
+
+Work From Home:
+
+- https://wfhmap.com/ (WFH data for both overall WFH and industry)
+- https://www.nber.org/papers/w32363 (WFH paper)
+
 ## Important Notes
+We needed more data to make stronger conclusions Results varied by industry, expected to vary globally as well if we were able to get data from outside the U.S.
 
 To view the GitHub repo for this website, click [here](https://github.com/donbowen/teamproject).
