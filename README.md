@@ -10,6 +10,7 @@ To see the complete analysis file(s) click [here](https://github.com/Keith-Cheun
 2. [Hypothesis](#hyp)
 3. [Data Collection](#section2)
 4. [Methodology](#meth)
+    a. [Figures](#figures)
 5. [Interpretation and Discussion](#interpretation)
 6. [Conclusion](#conc)
 
@@ -42,7 +43,7 @@ WFH Industry Data:
 
 ![](pics/WFH_data_example.png)
 <br><br>
-The first step for processing the data was to remove columns in the WFH data that were not relevant to WFH. These columns included full onsite and hybrid percentages. For the final dataset, we wanted to have columns for sector, month/year, WFH% and startups created. We removed the individual columns for months in the startup industry data and moved them into rows where the date was set as month/year. We changed the data type of the month/year using datetime python startup_fixed['year'] = pd.to_datetime(startup_fixed['year']) startup_fixed['year'] = startup_fixed['year'].dt.strftime('%m/%Y')
+The first step for processing the data was to remove columns in the WFH data that were not relevant to WFH. These columns included full onsite and hybrid percentages. For the final dataset, we wanted to have columns for sector, month/year, WFH% and startups created. We removed the individual columns for months in the startup industry data and moved them into rows where the date was set as month/year. We changed the data type of the month/year using datetime python '''startup_fixed['year'] = pd.to_datetime(startup_fixed['year']) startup_fixed['year'] = startup_fixed['year'].dt.strftime('%m/%Y')'''
 
 Once the data types were the same in both datasets, we merged them together on the keys sector and year to have one single dataset.
 
@@ -51,25 +52,42 @@ We had to merge multiple datasets and use information on variables that would us
 Regression Analysis: We conducted a regression analysis to assess the relationship between remote work and startup creation and utilized appropriate statistical techniques to control for confounding variables. We used Python and Jupyter Lab for all data analysis and visualizations below.
 
 ## Methodology <a name="meth"></a>
-Blah blah
+For our regression model, we want to analyze whether there is a relationship in an increase in the percentage of individuals working from home and the development of startups. Our baseline regression model has the amount of startups created as our y variable and the percentage of WFH as our x variable. We also wanted to analyze how WFH in different industries would be associated with the amount of startups created, so we add sector as a categorical x variable to our model. The below is an example of the code used for the regression:
 
 
 ```python
-import seaborn as sns 
-iris = sns.load_dataset('iris') 
+from statsmodels.iolib.summary2 import summary_col  # Importing summary_col function
+# regression model to show the relationship between the WFH share of the workforce and the number of startups created
 
-print(iris.head(),  '\n---')
-print(iris.tail(),  '\n---')
-print(iris.columns, '\n---')
-print("The shape is: ",iris.shape, '\n---')
-print("Info:",iris.info(), '\n---') # memory usage, name, dtype, and # of non-null obs (--> # of missing obs) per variable
-print(iris.describe(), '\n---') # summary stats, and you can customize the list!
-print(iris['species'].value_counts()[:10], '\n---')
-print(iris['species'].nunique(), '\n---')
+# Run OLS
+m1 = sm.OLS.from_formula('startups ~ wfh + C(sector)', data=merged).fit()
+m2 = sm.OLS.from_formula('startups ~ np.log(wfh) + C(sector)', data=merged).fit()  # Use np.log for log transformation
+
+# Print out multiple regression results at once
+table = summary_col(results=[m1, m2],
+                    float_format='%0.2f',
+                    stars=True,
+                    model_names=['m1', 'm2'],
+                    info_dict=None)  # You can pass additional information here if needed
 ```
+## Figures <a name="figures"></a>
 
-Notice that the output does NOT show! **You have to copy in figures and tables from the notebooks.**
+![](pics/startups_time_series.jpg)
+![](pics/wfh_time_series.jpg)
 
+Figure 1 and 2: The time series above shows the trend of startups created and the percentage of WFH after the COVID-19 pandemic
+
+![](pics/jointplot.jpg)
+
+Figure 3: This shows the distribution of startups at different percentages of WFH grouped by different industries
+
+![](pics/regression.jpg)
+
+Figure 4: This is a partial regression showing the relationship between startups and WFH
+
+![](pics/artsreg.png)
+![](pics/finreg.png)
+![](pics/regression.jpg)
 
 
 ## Interpretation and Discustion <a name="interpretation"></a>
