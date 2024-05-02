@@ -20,8 +20,8 @@ The "We Have Startups at Home" project aims to explore the relationship between 
 
 The inspiration for our final project originates from the impact of the COVID-19 pandemic. We want to analyze how the recent shift in work from home (WFH) during and after the pandemic influences the quantity of startups developed. We plan on using prior work on WFH, employee attitude towards WFH, and various lists of startups to help us understand the relationship between the shift in WFH and the quantity of startups created. First, we need to assess the startups on a macro scale. Generally, we are asking the following questions:
 
-What drives the creation of startups?
-Has there been a significant increase in WFH since 2019?
+1. What drives the creation of startups?
+2. Has there been a significant increase in WFH since 2019?
 
 ## Hypothesis <a name="hyp"></a>
 
@@ -120,13 +120,13 @@ If we were to expand this research project, we would look into the following are
 
 ## About the team
 
-<img src="pics/julio.jpg" alt="julio" width="300"/>
+<img src="pics/keith_headshot.jpg" alt="julio" width="300"/>
 <br>
-Julio is a senior at Lehigh studying finance.
+Keith is a senior at Lehigh studying finance.
 <br><br><br>
-<img src="pics/don2.jpg" alt="don" width="300"/>
+<img src="pics/josh_headshot.png" alt="don" width="300"/>
 <br>
-Don is an assistant professor at Lehigh.
+Josh is a senior at Lehigh studying Finan
 
 
 ## Source Code
