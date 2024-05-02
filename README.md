@@ -128,9 +128,11 @@ Keith is a senior at Lehigh studying Finance.
 <br>
 Josh is a senior at Lehigh studying Finance and PreLaw
 <br><br><br>
-<img src="pics/josh_headshot.png" alt="don" width="300"/>
+<img src="pics/danny_headshot.png" alt="don" width="300"/>
 <br>
 Danny is a senior at Lehigh studying Finance and Management. 
+<br>
+
 ## Source Code
 
 Startup development:
