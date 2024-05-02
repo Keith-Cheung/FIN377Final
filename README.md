@@ -15,16 +15,27 @@ To see the complete analysis file(s) click [here](https://github.com/Keith-Cheun
 
 ## Project Summary  <a name="introduction"></a>
 
-(The "Introduction" text above is formatted in heading 2 style.) The main goal of this project is to explore *(insert project idea here)*.  
+The "We Have Startups at Home" project aims to explore the relationship between remote work trends and the proliferation of startups. With the rise of remote work culture, especially accelerated by the COVID-19 pandemic, there is a growing interest in understanding how this trend intersects with entrepreneurial activities, particularly in the realm of startups. This report presents the findings of a regression analysis conducted to investigate the potential impact of remote work on startup creation and growth. We are conducting this analysis using work from home data from "WFHResearch.com" as well as startup data from the Bureau of Labor Statistics and United States Census Bureau.
+
+The inspiration for our final project originates from the impact of the COVID-19 pandemic. We want to analyze how the recent shift in work from home (WFH) during and after the pandemic influences the quantity of startups developed. We plan on using prior work on WFH, employee attitude towards WFH, and various lists of startups to help us understand the relationship between the shift in WFH and the quantity of startups created. First, we need to assess the startups on a macro scale. Generally, we are asking the following questions:
+
+What drives the creation of startups?
+Has there been a significant increase in WFH since 2019?
 
 ## Hypothesis <a name="hyp"></a>
 
+Our hypothesis is that we believe that there will be a strong correlation between the increase of WFH since 2015 and the amount of startups that have been created. With an increase in WFH flexibility, more people are starting their own businesses. Our goal is to find a relationship that shows a correlation between WFH and the amount of startups created.
+
 ## Data Collection <a name="section2"></a>
 
-Here is some code that we used to develop our analysis. Blah Blah. [More details are provided in the Appendix](page2).
- 
-Note that for the purposes of the website, you have to copy this code into the markdown file and  
-put the code inside trip backticks with the keyword `python`.
+The data for this project consists of samples ranging from the year 2015 to 2023. In the dataset Survival of private sector establishments by opening year, we first filtered the data to include only startups with 100% survival rate to show how many startups were created that year. We had to ensure that all the datatypes were consistent including the removal of commas. In the dataset WFH 1965-present, we had to convert the date time to a type that can be merged with the startup data. Once the data types were consistent in both datasets, we were able to merge them together to perform regression analysis. Because there were only monthly data after the year 2020, we had to use yearly data to see the effects of the pandemic on startups.
+
+Because we used yearly data, there were not enough samples to make a conclusion on the relationship between the creation of startups and the percentage of individuals working from home. We decided to look at monthly data from after the COVID-19 pandemic to see whether the increase in WFH impacted the development of startups. We specifically looked at various industries to see if there are trends within the industries regarding startups and WFH. The industries we took samples from were: utilities, finance and insurance, wholesale trade, transportation and warehousing, real estate, and arts and entertainment.
+
+While we were loading the data for startups and WFH, we noticed that the shape of the dataframes were different. The industry startup data had separate columns for the year as well as the months (Jan-Dec) and a single column for the sectors. The industry WFH data had one column with the date that included both the month and year and had multiple columns for the different sectors. Below are images that show the differences.
+
+Startup Industry Data:
+![](pics/startup_data_example.jpg)
 
 ```python
 import seaborn as sns 
@@ -46,7 +57,7 @@ Notice that the output does NOT show! **You have to copy in figures and tables f
 Blah blah
 
 
-## Analysis Section <a name="section3"></a>
+## Interpretation and Discustion <a name="interpretation"></a>
 
 Here are some graphs that we created in our analysis. We saved them to the `pics/` subfolder and include them via the usual markdown syntax for pictures.
 
@@ -62,7 +73,7 @@ More analysis here.
 <br><br>
 More analysis.
 
-## Summary <a name="summary"></a>
+## Conclusion <a name="conc"></a>
 
 Blah blah
 
@@ -79,6 +90,8 @@ Julio is a senior at Lehigh studying finance.
 Don is an assistant professor at Lehigh.
 
 
-## More 
+## Source Code
+
+## Important Notes
 
 To view the GitHub repo for this website, click [here](https://github.com/donbowen/teamproject).
